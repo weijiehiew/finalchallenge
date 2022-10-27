@@ -1,0 +1,62 @@
+from tkinter import *
+from functools import partial
+
+# Function to choose colour
+def choose_colour(button_pressed):
+    global colour
+    colour = button_pressed
+    print("Colour choice is {}".format(colour))
+
+#Create Grid
+def btnClicked (btnNum):
+    print(btnNum)
+btn = []
+# Main GUI Windows
+main = Tk()
+main.title("Tutorial 2 Sample")
+
+# 3x3 grid
+b=0
+for a in range(9):
+    if(a%3 == False):
+        b = b+1
+    btn.append(Button(main, text="", command = lambda c=a: btnClicked(c), height = 10, width = 20))
+    btn[-1].grid(row = a%3, column=a//3)
+
+
+
+# F2 (Colour Section)
+colour_value = 0
+
+colourWhite = Button(main, text="White", bg=('white'), font=(200), command=lambda m=0:choose_colour(m))
+colourGrey1 = Button(main, text="Grey1", bg=('grey99'), font=(200), command=lambda m=1:choose_colour(m))
+colourGrey2 = Button(main, text="Grey2", bg=('grey88'), font=(200), command=lambda m=2:choose_colour(m))
+colourGrey3 = Button(main, text="Grey3", bg=('grey77'), font=(200), command=lambda m=3:choose_colour(m))
+colourGrey4 = Button(main, text="Grey4", bg=('grey66'), fg=('white'), font=(200), command=lambda m=4:choose_colour(m))
+colourGrey5 = Button(main, text="Grey5", bg=('grey33'), fg=('white'), font=(200), command=lambda m=5:choose_colour(m))
+colourGrey6 = Button(main, text="Grey6", bg=('grey11'), fg=('white'), font=(200), command=lambda m=6:choose_colour(m))
+colourBlack = Button(main, text="Black", bg=('black'), fg=('white'), font=(200), command=lambda m=7:choose_colour(m))
+colourWhite.grid(row=0, column=1)
+colourGrey1.grid(row=1, column=1)
+colourGrey2.grid(row=2, column=1)
+colourGrey3.grid(row=3, column=1)
+colourGrey4.grid(row=4, column=1)
+colourGrey5.grid(row=5, column=1)
+colourGrey6.grid(row=6, column=1)
+colourBlack.grid(row=7, column=1)
+
+#F3
+whiteButton = Button(main, text="All White", bg=('white'), font=(200))
+blackButton = Button(main, text="All Black", bg=('black'), fg=('white'), font=(200))
+x_button = Button(main, text="X Pattern", bg=('yellow'), font=(200))
+sequenceButton = Button(main, text="Sequence", bg=('magenta'), fg=('white'), font=(200))
+whiteButton.grid(row=8, column=0)
+blackButton.grid(row=8, column=1)
+x_button.grid(row=8, column=2)
+sequenceButton.grid(row=8, column=3)
+
+#F4
+imageButton = Button(main, text="Send Image!", bg=('white'), font=(200))
+imageButton.grid(row=9, columnspan=4)
+
+main.mainloop()
