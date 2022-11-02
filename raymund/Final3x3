@@ -48,33 +48,33 @@ main = Tk()
 #this variable to store the colour choice 
 colour = 0
 
-#3x3 buttons
+#3x3 Grid
 frame1 = Frame(main) 
 frame1.grid(row=0, column=0)
 
-#shades button
+#Colour Section
 frame2 = Frame(main) 
 frame2.grid(row=0, column=1)
 
-#colour buttons
+#Pattern Button
 frame3 = Frame(main)
 frame3.grid(row=1, columnspan=2)  
 
-#send button
+#Send Image Button
 frame4 = Frame(main)
 frame4.grid(row=2, columnspan=2) 
 
-# 3x3 grid
+# 3x3 Grid
 button = [[j for j in range(3)] for i in range(3)]
 
 for j in range (3):
   for i in range (3):
-    button[i][j] = Button(frame1, font=("Calibri, 20"), width=7, height=3, command=lambda r=i, c=j:whitebtn(r, c))
+    button[i][j] = Button(frame1, font=("Arial, 20"), width=7, height=3, command=lambda r=i, c=j:whitebtn(r, c))
     button[i][j].grid(row=i, column=j)
 
     print(button)
 
-# #shades button
+# Colours Button
 white = Button(frame2, text="White", font=("Calibri, 12"), width=13, height=2, command=lambda m=0:change_colour(m))
 white.grid(row=0, column=0)
 grey1 = Button(frame2, text="Grey1", font=("Calibri, 12"), bg='grey99', width=13, height=2, command=lambda m=1:change_colour(m))
@@ -92,7 +92,7 @@ grey6.grid(row=6, column=0)
 black = Button(frame2, text="Black", font=("Calibri, 12"), bg='black', fg='white', width=13, height=2, command=lambda m=7:change_colour(m))
 black.grid(row=7, column=0)
 
-# # #colour button
+# Pattern Section
 allwhite = Button(frame3, text="All White",font=("Calibri, 12"), bg='white', width=13, height=2, command=allwht)
 allwhite.grid(row=0, column=0)
 
