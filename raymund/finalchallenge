@@ -41,6 +41,8 @@ for j in range (3):
     button[i][j].grid(row=i, column=j)
 
 
+    
+
 
 # F2 (Colour Section)
 colour_value = 0
