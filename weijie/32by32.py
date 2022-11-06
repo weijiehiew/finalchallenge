@@ -50,10 +50,12 @@ def pattern():
 def seq():
     for j in range(32):
         for i in range(32):
-            if i == 0:
+            if i == j:
                 button[i][j].config(bg = 'grey99')
-            elif i == 1:
-                button[i][j].config(bg = 'grey66')   
+            elif i - j <= 1:
+                button[i][j].config(bg = 'grey66')
+            elif i + j >= 2:
+                button[i][j].config(bg = 'grey33')  
             else:
                 button[i][j].config(bg = 'grey22')
 main = Tk()
