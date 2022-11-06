@@ -141,7 +141,7 @@ seq = Button(frame3, text="Sequence",font=("Calibri, 12"), bg='magenta', width=1
 seq.grid(row=0, column=3)
 
 #send btn
-send = Button(frame4, text="Send Imaged!", font=("Calibri, 12"), width=13, height=2)
+send = Button(frame4, text="Send Image", font=("Calibri, 12"), width=13, height=2)
 send.grid(row=0, column=0)
 
 print("Button is {}".format(value))
