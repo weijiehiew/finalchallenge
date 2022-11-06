@@ -25,61 +25,6 @@ def change_colour(m):
 
   print("colour is {}".format(colour))
 
-def allwht():
-  for i in range (3):
-    for j in range (3):
-      button[i][j].config(bg='grey99')
-
-def allblk():
-  for i in range (3):
-    for j in range (3):
-      button[i][j].config(bg='grey1')
-
-def pattern():
-  for i in range (3):
-    for j in range (3):
-      if i == j: 
-        button[i][j].config(bg='grey1')
-      elif i + j == 1: 
-        button[i][j].config(bg='grey99')
-      elif i + j == 2: 
-        button[i][j].config(bg='grey1')
-<<<<<<< Updated upstream
-      elif i + j == 3:
-        button[i][j].config(bg='grey99')
-# colour_list=['grey99', 'grey88', 'grey77', 'grey66', 'grey44', 'grey33', 'grey11', 'grey1']
-# colour_list=k   
-def sequence():
-  for i in range (3):
-    for j in range (3): 
-      if i + j == 0:
-         button[i][j].config(bg='grey99')
-      elif i == 0:
-        if j == 1:
-          button[i][j].config(bg='grey88')
-      elif i == 0:
-        if j == 2:
-          button[i][j].config(bg='grey77')
-      elif i == 1:
-        if j == 0:
-          button[i][j].config(bg='grey66')
-      elif i == 1:
-        if j == 1:
-          button[i][j].config(bg='grey44')
-      elif i == 1:
-        if j == 2:
-          button[i][j].config(bg='grey33')
-      elif i == 2:
-        if j == 0:
-          button[i][j].config(bg='grey11')
-      elif i == 2:
-        if j == 1:
-          button[i][j].config(bg='grey1')
-      elif i + j == 4:
-        button[i][j].config(bg='grey99')
-
-=======
-
 
 def change_colour(m):
     global colour
@@ -94,7 +39,19 @@ def allwhite():
 def allblack():
     for j in range(3):
         for i in range(3):
-            button[i][j].config(bg = 'black')
+            button[i][j].config(bg ='grey1')
+
+def pattern():
+  for i in range (3):
+    for j in range (3):
+      button[i][j].config(bg ='white')
+      if i == j: 
+        button[i][j].config(bg='grey1')
+      elif i + j == 1: 
+        button[i][j].config(bg='grey99')
+      elif i + j == 2: 
+        button[i][j].config(bg='grey1')
+
 
 def seq():
     for j in range(3):
@@ -105,7 +62,6 @@ def seq():
                 button[i][j].config(bg = 'grey66')   
             else:
                 button[i][j].config(bg = 'grey99')
->>>>>>> Stashed changes
 main = Tk()
 
 #this variable to store the colour choice 
@@ -156,11 +112,6 @@ grey6.grid(row=6, column=0)
 black = Button(frame2, text="Black", font=("Calibri, 12"), bg='grey1', fg='white', width=13, height=2, command=lambda m=7:change_colour(m))
 black.grid(row=7, column=0)
 
-<<<<<<< Updated upstream
-# # #colour button
-allwhite = Button(frame3, text="All White",font=("Calibri, 12"), bg='white', width=13, height=2, command=allwht)
-allwhite.grid(row=0, column=0)
-=======
 #all white button
 allwht = Button(frame3, text='All White', font = 'Arial,12',bg='white',width = 13, height = 2,command = allwhite)
 allwht.grid(row=0, column=0)
@@ -169,23 +120,14 @@ allwht.grid(row=0, column=0)
 allblk = Button(frame3, text='All Black', font = 'Arial,12',bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
 allblk.grid(row=0, column=1)
 
-#cross pattern X
-crosspattern = Button(frame3, text='X Pattern', font = 'Arial,12',bg='yellow',width = 13, height = 2)
-crosspattern.grid(row=0, column=2)
+#cross pattern
+xpattern = Button(frame3, text="X Pattern",font=("Calibri, 12"), bg='gold', width=13, height=2, command=pattern)
+xpattern.grid(row=0, column=2)
 
 #sequence button
 sequence = Button(frame3, text='Sequence', font = 'Arial,12',bg='pink',fg = 'black',width = 13, height = 2,command = seq)
 sequence.grid(row=0, column=3)
->>>>>>> Stashed changes
 
-allblack = Button(frame3, text="All Black",font=("Calibri, 12"), bg='black', fg='white', width=13, height=2, command=allblk)
-allblack.grid(row=0, column=1)
-
-xpattern = Button(frame3, text="X Pattern",font=("Calibri, 12"), bg='gold', width=13, height=2, command=pattern)
-xpattern.grid(row=0, column=2)
-
-seq = Button(frame3, text="Sequence",font=("Calibri, 12"), bg='magenta', width=13, height=2, command=sequence)
-seq.grid(row=0, column=3)
 
 #send btn
 send = Button(frame4, text="Send Image", font=("Calibri, 12"), width=13, height=2)
