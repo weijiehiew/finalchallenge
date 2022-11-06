@@ -26,30 +26,30 @@ def change_colour(m):
   print("colour is {}".format(colour))
 
 def allwhite():
-    for j in range(3):
-        for i in range (3):
+    for j in range(32):
+        for i in range (32):
             button[i][j].config(bg='white')
 
 def allblack():
-    for j in range(3):
-        for i in range(3):
+    for j in range(32):
+        for i in range(32):
             button[i][j].config(bg ='grey1')
 
 def pattern():
-  for i in range (3):
-    for j in range (3):
+  for i in range (32):
+    for j in range (32):
       button[i][j].config(bg ='white')
       if i == j: 
         button[i][j].config(bg='grey1')
       elif i + j == 1: 
         button[i][j].config(bg='grey99')
-      elif i + j == 2: 
+      elif i + j == 32: 
         button[i][j].config(bg='grey1')
 
 
 def seq():
-    for j in range(3):
-        for i in range(3):
+    for j in range(32):
+        for i in range(32):
             if i == 0:
                 button[i][j].config(bg = 'grey99')
             elif i == 1:
@@ -78,15 +78,13 @@ frame4 = Frame(main)
 frame4.grid(row=2, columnspan=2) 
 
 # 3x3 grid
-button = [[j for j in range(3)] for i in range(3)]
-value = [(0 for j in range(3)) for i in range(3)]
+button = [[j for j in range(32)] for i in range(32)]
+value = [(0 for j in range(32)) for i in range(32)]
 
-for i in range (3):
-  for j in range (3):
-    button[i][j] = Button(frame1, font=("Calibri, 20"), bg='grey99', width=7, height=3, command=lambda r=i, c=j:whitebtn(r, c))
+for i in range (32):
+  for j in range (32):
+    button[i][j] = Button(frame1, font=("Calibri, 10"), bg='grey99', width=2, height=1, command=lambda r=i, c=j:whitebtn(r, c))
     button[i][j].grid(row=i, column=j)
-
-    print(button)
 
 # #shades button
 white = Button(frame2, text="White", font=("Calibri, 12"), bg='grey99', width=13, height=2, command=lambda m=0:change_colour(m))
