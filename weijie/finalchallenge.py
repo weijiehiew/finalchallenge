@@ -25,12 +25,6 @@ def change_colour(m):
 
   print("colour is {}".format(colour))
 
-
-def change_colour(m):
-    global colour
-    colour = m
-    print('Colour is {}'.format(colour))
-
 def allwhite():
     for j in range(3):
         for i in range (3):
@@ -57,11 +51,11 @@ def seq():
     for j in range(3):
         for i in range(3):
             if i == 0:
-                button[i][j].config(bg = 'grey')
+                button[i][j].config(bg = 'grey99')
             elif i == 1:
                 button[i][j].config(bg = 'grey66')   
             else:
-                button[i][j].config(bg = 'grey99')
+                button[i][j].config(bg = 'grey22')
 main = Tk()
 
 #this variable to store the colour choice 
