@@ -1,3 +1,3 @@
 # Final Challenge
 
-![](this_is_fine.jpg)
+![](markdown/this_is_fine.jpg)

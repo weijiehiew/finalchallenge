@@ -44,6 +44,7 @@ def pattern():
         button[i][j].config(bg='grey99')
       elif i + j == 2: 
         button[i][j].config(bg='grey1')
+<<<<<<< Updated upstream
       elif i + j == 3:
         button[i][j].config(bg='grey99')
 # colour_list=['grey99', 'grey88', 'grey77', 'grey66', 'grey44', 'grey33', 'grey11', 'grey1']
@@ -77,6 +78,34 @@ def sequence():
       elif i + j == 4:
         button[i][j].config(bg='grey99')
 
+=======
+
+
+def change_colour(m):
+    global colour
+    colour = m
+    print('Colour is {}'.format(colour))
+
+def allwhite():
+    for j in range(3):
+        for i in range (3):
+            button[i][j].config(bg='white')
+
+def allblack():
+    for j in range(3):
+        for i in range(3):
+            button[i][j].config(bg = 'black')
+
+def seq():
+    for j in range(3):
+        for i in range(3):
+            if i == 0:
+                button[i][j].config(bg = 'grey')
+            elif i == 1:
+                button[i][j].config(bg = 'grey66')   
+            else:
+                button[i][j].config(bg = 'grey99')
+>>>>>>> Stashed changes
 main = Tk()
 
 #this variable to store the colour choice 
@@ -127,9 +156,27 @@ grey6.grid(row=6, column=0)
 black = Button(frame2, text="Black", font=("Calibri, 12"), bg='grey1', fg='white', width=13, height=2, command=lambda m=7:change_colour(m))
 black.grid(row=7, column=0)
 
+<<<<<<< Updated upstream
 # # #colour button
 allwhite = Button(frame3, text="All White",font=("Calibri, 12"), bg='white', width=13, height=2, command=allwht)
 allwhite.grid(row=0, column=0)
+=======
+#all white button
+allwht = Button(frame3, text='All White', font = 'Arial,12',bg='white',width = 13, height = 2,command = allwhite)
+allwht.grid(row=0, column=0)
+
+#all black button
+allblk = Button(frame3, text='All Black', font = 'Arial,12',bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
+allblk.grid(row=0, column=1)
+
+#cross pattern X
+crosspattern = Button(frame3, text='X Pattern', font = 'Arial,12',bg='yellow',width = 13, height = 2)
+crosspattern.grid(row=0, column=2)
+
+#sequence button
+sequence = Button(frame3, text='Sequence', font = 'Arial,12',bg='pink',fg = 'black',width = 13, height = 2,command = seq)
+sequence.grid(row=0, column=3)
+>>>>>>> Stashed changes
 
 allblack = Button(frame3, text="All Black",font=("Calibri, 12"), bg='black', fg='white', width=13, height=2, command=allblk)
 allblack.grid(row=0, column=1)
