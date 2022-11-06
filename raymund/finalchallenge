@@ -13,15 +13,15 @@ def btnClicked (btnNum):
 btn = []
 # Main GUI Windows
 main = Tk()
-main.geometry('800x800')
+# main.geometry('800x800')
 main.title("Tutorial 2 Sample")
 
 #3x3 Grid
-frame1 = Frame(main) 
+frame1 = Frame(main, width=8, height=4) 
 frame1.grid(row=0, column=0)
 
 #Colour Section
-frame2 = Frame(main) 
+frame2 = Frame(main, width=8, height=4) 
 frame2.grid(row=0, column=1)
 
 #Pattern Button
