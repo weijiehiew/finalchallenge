@@ -135,26 +135,26 @@ black = Button(frame2, text="Black", font=("Calibri, 12"), bg='grey1', fg='white
 black.grid(row=7, column=0)
 
 #all white button
-allwht = Button(frame3, text='All White', font = 'Arial,12',bg='white',width = 13, height = 2,command = allwhite)
+allwht = Button(frame3, text='All White', font = ("Calibri, 12"), bg='white',width = 13, height = 2,command = allwhite)
 allwht.grid(row=0, column=0)
 
 #all black button
-allblk = Button(frame3, text='All Black', font = 'Arial,12',bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
+allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
 allblk.grid(row=0, column=1)
 
 #cross pattern
-xpattern = Button(frame3, text="X Pattern",font=("Calibri, 12"), bg='gold', width=13, height=2, command=pattern)
-xpattern.grid(row=0, column=2)
+pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pattern)
+pattern1.grid(row=0, column=2)
 
 #sequence button
-sequence = Button(frame3, text='Sequence', font = 'Arial,12',bg='pink',fg = 'black',width = 13, height = 2,command = seq)
-sequence.grid(row=0, column=3)
+pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = seq)
+pattern2.grid(row=0, column=3)
 
 
 #send btn
-send = Button(frame4, text="Send Image", font=("Calibri, 12"), width=13, height=2, command=sendImage )
+send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
 send.grid(row=0, column=0)
 
-print("Button is {}".format(value))
+# print("Button is {}".format(value))
 
 main.mainloop()
