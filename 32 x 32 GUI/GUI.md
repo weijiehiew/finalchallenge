@@ -10,7 +10,6 @@ The purpose of this 32 x 32 GUI is to allow users to be able to colour the 32 x 
 
 ## Getting started
 
-
 ```
 from tkinter import *
 
@@ -20,6 +19,8 @@ main.mainloop()
 ```
 
 ## 32 by 32 Grid
+
+![Alt text](../../../../../../../../C:/Users/limmi/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/images/32x32.jpg)
 
 ```
 button = [[j for j in range(32)] for i in range(32)]
