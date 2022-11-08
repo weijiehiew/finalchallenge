@@ -31,13 +31,13 @@ def change_colour(m):
   global colour
   colour=m 
 
-  print("colour is {}".format(colour))
+  print("Colour chosen is {}".format(colour))
 
 
 def allwhite():
     for j in range(32):
         for i in range (32):
-            button[i][j].config(bg='white')
+            button[i][j].config(bg='grey99')
             value[i][j] = 0
 
 def allblack():
@@ -53,56 +53,68 @@ def sendImage():
     print(value)
  
 
-def pat1():
-  for i in range (32):
-    for j in range (32):
-      button[i][j].config(bg ='white')
-      value[i][j] = 0
-      if i == j: 
-        button[i][j].config(bg='grey1')
-        value[i][j] = 90
-      elif i + j == 1: 
-        button[i][j].config(bg='grey99')
-        value[i][j] = 0
-      elif i + j == 31: 
-        button[i][j].config(bg='grey1')
-        value[i][j] = 90
+def pattern():
+    for i in range (32):
+        for j in range (32):
+            if i == j: 
+                button[i][j].config(bg='grey1')
+                value[i][j] = 90
+            elif i + j == 31: 
+                button[i][j].config(bg='grey1')
+                value[i][j] = 90
+            else:
+                button[i][j].config(bg ='grey77')
+                value[i][j] = 30
 
 
-def pat2():
+
+def seq():
     for j in range(32):
         for i in range(32):
-            if i == j:
-                button[i][j].config(bg = 'grey99')
-                value[i][j] = 0
-            elif i - j <= 1:
+            if i == 1 or i == 9 or i == 17 or i == 25:
+                button[i][j].config(bg = 'grey88')
+                value[i][j] = 20
+            elif i == 2 or i == 10 or i == 18 or i == 26:
+                button[i][j].config(bg = 'grey77')
+                value[i][j] = 30
+            elif i == 3 or i == 11 or i == 19 or i == 27:
                 button[i][j].config(bg = 'grey66')
                 value[i][j] = 40
-            elif i + j >= 2:
-                button[i][j].config(bg = 'grey33')  
+            elif i == 4 or i == 12 or i == 20 or i == 28:
+                button[i][j].config(bg = 'grey44')
+                value[i][j] = 50
+            elif i == 5 or i == 13 or i == 21 or i == 29:
+                button[i][j].config(bg = 'grey33')
                 value[i][j] = 60
-            else:
+            elif i == 6 or i == 14 or i == 22 or i == 30:
                 button[i][j].config(bg = 'grey11')
+                value[i][j] = 70
+            elif i == 7 or i == 15 or i == 23 or i == 31:
+                button[i][j].config(bg = 'grey1')
                 value[i][j] = 90
+            else:
+                button[i][j].config(bg = 'grey99')
+                value[i][j] = 0
+            
 main = Tk()
 
 
-#this variable to store the colour choice 
+#A variable to store the colour choices 
 colour = 0
 
-#3x3 btn
+#3x3 buttons
 frame1 = Frame(main) 
 frame1.grid(row=0, column=0)
 
-#shades btn
+#shades buttons
 frame2 = Frame(main) 
 frame2.grid(row=0, column=1)
 
-#colour btns
+#colour buttons
 frame3 = Frame(main)
 frame3.grid(row=1, columnspan=2)  
 
-#send btn
+#send button
 frame4 = Frame(main)
 frame4.grid(row=2, columnspan=2) 
 
@@ -117,7 +129,7 @@ for i in range (32):
     button[i][j].grid(row=i, column=j)
     
 
-# #shades button
+# shades button
 white = Button(frame2, text="White", font=("Calibri, 12"), bg='grey99', width=13, height=2, command=lambda m=0:change_colour(m))
 white.grid(row=0, column=0)
 grey1 = Button(frame2, text="Grey1", font=("Calibri, 12"), bg='grey88', width=13, height=2, command=lambda m=1:change_colour(m))
@@ -144,18 +156,17 @@ allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg 
 allblk.grid(row=0, column=1)
 
 #cross pattern
-pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pat1)
-pattern1.grid(row=0, column=2)
+xpattern = Button(frame3, text="X Pattern",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pattern)
+xpattern.grid(row=0, column=2)
 
 #sequence button
-pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
-pattern2.grid(row=0, column=3)
+sequence = Button(frame3, text="Sequence", font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = seq)
+sequence.grid(row=0, column=3)
 
 
 #send btn
 send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
 send.grid(row=0, column=0)
 
-# print("Button is {}".format(value))
 
 main.mainloop()
