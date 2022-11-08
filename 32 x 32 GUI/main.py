@@ -59,9 +59,6 @@ def pattern():
             if i == j: 
                 button[i][j].config(bg='grey1')
                 value[i][j] = 90
-            #   elif i + j == 1: 
-            #     button[i][j].config(bg='grey99')
-            #     value[i][j] = 0
             elif i + j == 31: 
                 button[i][j].config(bg='grey1')
                 value[i][j] = 90
@@ -74,9 +71,6 @@ def pattern():
 def seq():
     for j in range(32):
         for i in range(32):
-            # if i == 0:
-            #     button[i][j].config(bg = 'grey99')
-            #     value[i][j] = 0
             if i == 1 or i == 9 or i == 17 or i == 25:
                 button[i][j].config(bg = 'grey88')
                 value[i][j] = 20
@@ -105,7 +99,7 @@ def seq():
 main = Tk()
 
 
-#this variable to store the colour choice 
+#A variable to store the colour choices 
 colour = 0
 
 #3x3 buttons
