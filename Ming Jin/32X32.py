@@ -52,7 +52,7 @@ def sendImage():
     print("Image has been printed, the values are.....")
     print(value)
 
-def pattern():
+def pat1():
   for i in range (32):
     for j in range (32):
       button[i][j].config(bg ='white')
@@ -68,7 +68,7 @@ def pattern():
         value[i][j] = 90
 
 
-def seq():
+def pat2():
     for j in range(32):
         for i in range(32):
             if i == j:
@@ -143,11 +143,11 @@ allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg 
 allblk.grid(row=0, column=1)
 
 #cross pattern
-pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pattern)
+pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pat1)
 pattern1.grid(row=0, column=2)
 
 #sequence button
-pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = seq)
+pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
 pattern2.grid(row=0, column=3)
 
 
