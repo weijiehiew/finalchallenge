@@ -107,7 +107,7 @@ for i in range (32):
 
 for i in range (32):
   for j in range (32):
-    button[i][j] = Button(frame1, font=("Calibri, 6"), bg='grey99', command=lambda r=i, c=j:whitebtn(r, c))
+    button[i][j] = Button(frame1, font=("Calibri, 5"), width=2, height=1, bg='grey99', command=lambda r=i, c=j:whitebtn(r, c))
     button[i][j].grid(row=i, column=j)
 
     
