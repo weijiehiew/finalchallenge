@@ -1,46 +1,52 @@
-# Markdown Lesson Introduction
+# Markdown lesson introduction
 
-This **markdown document** teachers students how to document their project into *Github*.
+This **markdown document** teaches students how to document their projects in *GitHub*.
 
-## Inserting a Image
+## Inserting an image
+This is an image of a cat.
 
-This is an image of a scenery
-![](https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/limmi/OneDrive/Documents/GitHub/finalchallenge/E23519-FR-01_xgaplus.jpg?version%3D1667374973886)
-![](cat.webp)
+![](cat.jpg)
 
-## Fishing of fish
+## Fishing for fish
+>Feed a man with a fish, you feed him for a day.
+Teach a man how to fish, you will feed him for a lifetime
 
-> Fish fish fish fish fish
+This sentence is out of the quote.
 
-## playing with list
-1. group a
-   1. jason
-   1. chin rong
-2. group b
-3. group c
-4. group d
+## Playing with lists
+1. Group A
+    1. Bob
+    1. Tom
+2. Group B
+3. Group C
+4. Group D
 
-## Favourite Lectures
-- EWAN
-  - FUNNY 
-  - HELPFUL
-- MALCOLM
-  - Like my father
-- MARK
+## Favourite lecturers
+- Ewan
+    * Hollow dot
+- Malcolm
+    - Solid to hollow
+- Mark
 
-# using tkinter library
 
-type in the following code
+## Using TKinter Library
 
-`from tkinter import`
-`main tk()`
+To use TKinter on laptop please type in the following code,
+
+```
+from tkinter import *
+main = Tk()
+main.mainloop()
+```
+
+## Mermaid graph
 
 ```mermaid
 graph TD
-A[Nanyang Poly]--> B[School of Engineering]
-B --> C[Infocomm Media Engineering]
-C --> D[<font size = 10>MTS<br><font size = 2>Malcolm<br>Ewan<br>Frankie]
-C --> E[Software]
-C --> F[UI/UX]
-C --> G[Cloud]
-
+A[NYP] --> B[SEG]
+B --> C[Infocomm Media]
+C --> D[<font size = 4>MTS<br><font size = 2> Malcolm<br>Frankie<br>]
+C --> E[Cloud]
+C --> F[UIUX]
+C --> G[Software]
+```

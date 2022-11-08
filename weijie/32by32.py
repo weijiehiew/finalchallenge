@@ -85,7 +85,7 @@ value = [(0 for j in range(32)) for i in range(32)]
 
 for i in range (32):
   for j in range (32):
-    button[i][j] = Button(frame1, font=("Calibri, 10"), bg='grey99', width=2, height=1, command=lambda r=i, c=j:whitebtn(r, c))
+    button[i][j] = Button(frame1, font=("Calibri, 5"), bg='grey99', width=2, height=1, command=lambda r=i, c=j:whitebtn(r, c))
     button[i][j].grid(row=i, column=j)
 
 # #shades button
