@@ -50,7 +50,7 @@ def allblack():
 def sendImage():
     global value
     print("Image has been printed, the values are.....")
-    print(value)
+ 
 
 def pat1():
   for i in range (32):
