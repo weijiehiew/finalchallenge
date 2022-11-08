@@ -84,3 +84,33 @@ black.grid(row=7, column=0)
 
 ```
 
+## Pattern bar
+This chunk of code provides the pattern bar
+
+```
+#all white button
+allwht = Button(frame3, text='All White', font = ("Calibri, 12"), bg='white',width = 13, height = 2,command = allwhite)
+allwht.grid(row=0, column=0)
+
+#all black button
+allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
+allblk.grid(row=0, column=1)
+
+#cross pattern
+pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pat1)
+pattern1.grid(row=0, column=2)
+
+#sequence button
+pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
+pattern2.grid(row=0, column=3)
+
+```
+
+## Send image button
+This button will send the data of the pattern
+
+```
+send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
+send.grid(row=0, column=0)
+```
+
