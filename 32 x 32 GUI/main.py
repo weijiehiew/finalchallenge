@@ -63,8 +63,8 @@ def pattern():
                 button[i][j].config(bg='grey1')
                 value[i][j] = 90
             else:
-                button[i][j].config(bg ='grey77')
-                value[i][j] = 30
+                button[i][j].config(bg ='grey99')
+                value[i][j] = 0
 
 
 
