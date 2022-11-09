@@ -15,7 +15,7 @@ Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface
 ### **gif image
 
 ## Pattern Section
-"All White" Button:
+**"All White" Button:**
 
 ![Alt text](documentation%20pics/Allwhite.png)
 
@@ -23,7 +23,7 @@ It makes the 32x32 grid buttons turn into the lightest shade (White). But it is 
 
 ---
 
-"All Black" Button:
+**"All Black" Button:**
 
 ![Alt text](documentation%20pics/allblack.png)
 
@@ -31,7 +31,7 @@ It makes the 32x32 grid buttons turn into the darkest shades (Black).
 
 ---
 
-"X Pattern" Button:
+**"X Pattern" Button:**
 
 ![Alt text](documentation%20pics/xpat.png)
 
@@ -39,7 +39,7 @@ It turns the 32x32 grid into a cross shape with the black shade.
 
 ---
 
-"Sequence" Button:
+**"Sequence" Button:**
 
 ![Alt text](documentation%20pics/seq.png)
 
