@@ -1,14 +1,32 @@
 # Pixel Tint 32 x 32 GUI
 
-## First look at the 32 by 32 GUI
+## First look of Pixel Tint
+<br>
+
 ![Alt text](GUI.png)
 
 ## Purpose of the 32 x 32 GUI
->Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey.
+Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey.
+
+---
+
+### How it works:
+>If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid will change to its colour.
+
+### **gif image
+
+**Pattern Section:**
+<br>
+<br>
+"All White" Button
+
+![Alt text](documentation%20pics/Allwhite.png)
 
 <br>
 
-## Getting started
+
+
+# Getting started
 
 >Import tkinter library into the file and create a GUI application window on a main event loop
 
