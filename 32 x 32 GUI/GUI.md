@@ -1,16 +1,15 @@
 # 32 x 32 GUI
 
 ## First look at the 32 by 32 GUI
-![Alt text](../../../../../../../../C:/Users/limmi/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/Screenshot%202022-11-08%20225646.png)
-
+![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/documentation%20pics/32by32GUI.jpg)
+![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32by32GUI.jpg)
 ## Purpose of the 32 x 32 GUI
-The purpose of this 32 x 32 GUI is to allow users to be able to colour the 32 x 32 grid with different shades of grey. They will then be able to send the image out which will correspond with the 32 x 32 polarizing dishes.
+Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence with the  different shades of grey.
 
 <br>
 
 ## Getting started
-
-Import tkinter library into the file. This would br required to create the GUI.
+Create a GUI application window on a main event loop
 
 ```
 from tkinter import *
@@ -20,8 +19,8 @@ main = Tk()
 main.mainloop()
 ```
 
-## Creating frames to put the different sections in
-Over here, we are creating frames to add in the different sections such as the grid itself, the colour selection bar, the patterns bar, and the send image button.
+## Use of frame statement
+ Create frames to separate sections: Frame 1(32x32 Grid), Frame 2(Colour Selection Bar), Frame 3 (Patterns Bar), Frame 4 (Send Image Button).
 
 ```
 #3x3 btn
@@ -45,6 +44,8 @@ frame4.grid(row=2, columnspan=2)
 # insert image here of the frames
 
 ## 32 by 32 Grid
+
+![Alt text](../../../../../../../../C:/Users/limmi/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/images/32x32.jpg)
 
 ```
 button = [[j for j in range(32)] for i in range(32)]
@@ -85,43 +86,26 @@ black.grid(row=7, column=0)
 ```
 
 ## Pattern bar
-This chunk of code provides the pattern bar.
+This chunk of code provides the pattern bar
 
-### All white button
 ```
 #all white button
 allwht = Button(frame3, text='All White', font = ("Calibri, 12"), bg='white',width = 13, height = 2,command = allwhite)
 allwht.grid(row=0, column=0)
-```
-Insert image of all white here
 
-### All black button
-```
 #all black button
 allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
 allblk.grid(row=0, column=1)
-```
-insert image of all black
 
-### Cross pattern
-```
 #cross pattern
 pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pat1)
 pattern1.grid(row=0, column=2)
-```
 
-Insert image of cross pattern here
-
-### Sequence button
-```
 #sequence button
 pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
 pattern2.grid(row=0, column=3)
+
 ```
-
-Insert image of sequence pattern here
-
-
 
 ## Send image button
 This button will send the data of the pattern
@@ -130,8 +114,4 @@ This button will send the data of the pattern
 send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
 send.grid(row=0, column=0)
 ```
-insert image of data output here
-
-
-## 
 
