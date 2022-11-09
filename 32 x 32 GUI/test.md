@@ -1,16 +1,16 @@
-# 32 x 32 GUI
+# Pixel Tint 32 x 32 GUI
 
 ## First look at the 32 by 32 GUI
-![Alt text](../../../../../../../../C:/Users/limmi/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/Screenshot%202022-11-08%20225646.png)
+![Alt text](GUI.png)
 
 ## Purpose of the 32 x 32 GUI
-The purpose of this 32 x 32 GUI is to allow users to be able to colour the 32 x 32 grid with different shades of grey. They will then be able to send the image out which will correspond with the 32 x 32 polarizing dishes.
+>Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey.
 
 <br>
 
 ## Getting started
 
-Import tkinter library into the file. This would br required to create the GUI.
+>Import tkinter library into the file and create a GUI application window on a main event loop
 
 ```
 from tkinter import *
@@ -20,11 +20,20 @@ main = Tk()
 main.mainloop()
 ```
 
-## Creating frames to put the different sections in
-Over here, we are creating frames to add in the different sections such as the grid itself, the colour selection bar, the patterns bar, and the send image button.
+## Use of Frame Statement
+
+ >Create frames to separate sections of the main window: 
+ <br>
+ - Frame 1(32x32 Grid)
+ <br>
+  - Frame 2 (Colour Selection Bar)
+  <br>
+  - Frame 3 (Patterns Bar)
+  <br>
+  - Frame 4 (Send Image Button).
 
 ```
-#3x3 btn
+#32x32 btn
 frame1 = Frame(main) 
 frame1.grid(row=0, column=0)
 
@@ -42,10 +51,17 @@ frame4.grid(row=2, columnspan=2)
 
 ```
 
-# insert image here of the frames
+### *insert image here of the frames
 
-## 32 by 32 Grid
+# How to code the Pixel Tint
 
+## 32 by 32 Grid:
+
+>Using the Nested For Loop statement, it will create a two dimentional 32 x 32 grid using rows and columns.
+<br>
+<br>
+i=rows,
+j=columns
 ```
 button = [[j for j in range(32)] for i in range(32)]
 
@@ -57,12 +73,13 @@ for i in range (32):
     button[i][j].grid(row=i, column=j)
 
 ```
+>The "button" variable 
 
 # insert image here for the grid
 
 
-## Colour selection bar
-Over here, we create the 8 different shades of grey for the user to select to colour the squares in the grid.
+## Colours Selection Section
+>Create 8 different Tkinter buttons of the different shades of grey for the user to select to colour the squares in the grid.
 
 ```
 white = Button(frame2, text="White", font=("Calibri, 12"), bg='grey99', width=13,height=2, command=lambda m=0:change_colour(m))

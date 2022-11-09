@@ -102,7 +102,7 @@ main = Tk()
 #A variable to store the colour choices 
 colour = 0
 
-#3x3 buttons
+#32x32 buttons
 frame1 = Frame(main) 
 frame1.grid(row=0, column=0)
 
