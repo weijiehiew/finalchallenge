@@ -12,7 +12,7 @@ Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface
 ### How it works:
 >If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid will change to its colour.
 
-### **gif image
+![Alt text](diagram/documentation%20pics/Gif%20Video.gif)
 
 ## Pattern Section
 **"All White" Button:**

@@ -1,8 +1,7 @@
 # 32 x 32 GUI
 
 ## First look at the 32 by 32 GUI
-![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/documentation%20pics/32by32GUI.jpg)
-![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32by32GUI.jpg)
+![Alt text](../../../../../../../../C:/Users/limmi/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/Screenshot%202022-11-08%20225646.png)
 ## Purpose of the 32 x 32 GUI
 Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence with the  different shades of grey.
 
