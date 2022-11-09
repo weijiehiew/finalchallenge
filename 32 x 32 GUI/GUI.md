@@ -10,6 +10,8 @@ The purpose of this 32 x 32 GUI is to allow users to be able to colour the 32 x 
 
 ## Getting started
 
+Import tkinter library into the file. This would br required to create the GUI.
+
 ```
 from tkinter import *
 
@@ -111,4 +113,8 @@ This button will send the data of the pattern
 send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
 send.grid(row=0, column=0)
 ```
+insert image of data output here
+
+
+## 
 
