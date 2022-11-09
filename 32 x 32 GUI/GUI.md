@@ -87,24 +87,41 @@ black.grid(row=7, column=0)
 ## Pattern bar
 This chunk of code provides the pattern bar
 
+### All white button
 ```
 #all white button
 allwht = Button(frame3, text='All White', font = ("Calibri, 12"), bg='white',width = 13, height = 2,command = allwhite)
 allwht.grid(row=0, column=0)
+```
+Insert image of all white here
 
+### All black button
+```
 #all black button
 allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
 allblk.grid(row=0, column=1)
+```
+insert image of all black
 
+### Cross pattern
+```
 #cross pattern
 pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pat1)
 pattern1.grid(row=0, column=2)
+```
 
+Insert image of cross pattern here
+
+### Sequence button
+```
 #sequence button
 pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
 pattern2.grid(row=0, column=3)
-
 ```
+
+Insert image of sequence pattern here
+
+
 
 ## Send image button
 This button will send the data of the pattern
