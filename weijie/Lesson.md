@@ -5,7 +5,8 @@ This **markdown document** teaches students how to document their projects in *G
 ## Inserting an image
 This is an image of a cat.
 
-![](cat.jpg)
+![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/markdown/cat.jpg)
+
 
 ## Fishing for fish
 >Feed a man with a fish, you feed him for a day.
