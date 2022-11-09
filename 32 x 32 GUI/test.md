@@ -1,9 +1,8 @@
 # Pixel Tint 32 x 32 GUI
 
 ## First look of Pixel Tint
-<br>
 
-![Alt text](GUI.png)
+![Alt text](documentation%20pics/GUI.png)
 
 ## Purpose of the 32 x 32 GUI
 Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey.
