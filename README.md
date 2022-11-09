@@ -2,7 +2,7 @@
 
 ## First look of Pixel Tint
 
-![Alt text](diagram/documentation%20pics/GUI.png)
+![Alt text](diagram/GUI.png)
 
 ## Purpose of the 32 x 32 GUI
 Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey. Sending the image after will output the values of the buttons.
@@ -12,12 +12,12 @@ Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface
 ### How it works:
 If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid will change to its colour.
 
-![Alt text](diagram/documentation%20pics/Gif%20Video.gif)
+![Alt text](diagram/Gif%20Video.gif)
 
 ## Pattern Section
 **"All White" Button:**
 
-![Alt text](diagram/documentation%20pics/Allwhite.png)
+![Alt text](diagram/Allwhite.png)
 
 It makes the 32x32 grid buttons turn into the lightest shade (White). But it is also to reset the grid back to white.
 
@@ -25,7 +25,7 @@ It makes the 32x32 grid buttons turn into the lightest shade (White). But it is 
 
 **"All Black" Button:**
 
-![Alt text](diagram/documentation%20pics/allblack.png)
+![Alt text](diagram/allblack.png)
 
 It makes the 32x32 grid buttons turn into the darkest shades (Black).
 
@@ -33,7 +33,7 @@ It makes the 32x32 grid buttons turn into the darkest shades (Black).
 
 **"X Pattern" Button:**
 
-![Alt text](diagram/documentation%20pics/xpat.png)
+![Alt text](diagram/xpat.png)
 
 It turns the 32x32 grid into a cross shape using the black shade.
 
@@ -41,7 +41,7 @@ It turns the 32x32 grid into a cross shape using the black shade.
 
 **"Sequence" Button:**
 
-![Alt text](diagram/documentation%20pics/seq.png)
+![Alt text](diagram/seq.png)
 
 The 32x32 grid turns into a faded sequence of the shades.
 
@@ -49,7 +49,7 @@ The 32x32 grid turns into a faded sequence of the shades.
 
 **"Send Image" Button:**
 
-![Alt text](diagram/documentation%20pics/value.png)
+![Alt text](diagram/value.png)
 
 It outputs the List of List degree value of the shade colour from the 32x32 grid in the terminal section.
 
@@ -72,16 +72,13 @@ main.mainloop()
 
  >Next we created frames to separate the main window into containers like section to group and organize the widget layout.
 <br>
-<br>
+
 We divided them into four sections:
  <br>
  - Frame 1(32x32 Grid)
- <br>
-  - Frame 2 (Colour Selection Bar)
-  <br>
-  - Frame 3 (Patterns Bar)
-  <br>
-  - Frame 4 (Send Image Button).
+ - Frame 2 (Colour Selection Bar)
+ - Frame 3 (Patterns Bar)
+ - Frame 4 (Send Image Button).
 
 ```
 #32x32 btn
@@ -99,8 +96,9 @@ frame3.grid(row=1, columnspan=2)
 #send btn
 frame4 = Frame(main)
 frame4.grid(row=2, columnspan=2)
-
 ```
+A visual representation of how we want each sections to look like:
+
 ![Alt text](diagram/frame.png)
 
 <br>
@@ -108,30 +106,58 @@ frame4.grid(row=2, columnspan=2)
 # How to code the Pixel Tint System
 
 ## 32 by 32 Grid Section:
+First make a variable called "button" where it creates a list of list of the 1024 tkinter buttons 
 
-Using the Nested For Loop statement, it will create a two dimentional 32 x 32 grid in the form of rows and columns.
 <br>
-<br>
+
 >i=rows,
 j=columns
 ```
 button = [[j for j in range(32)] for i in range(32)]
-
 ```
+Then using the Nested For Loop statement, this will create a two dimentional 32 x 32 grid in the form of rows and columns.
 
 ```
 for i in range (32):
   for j in range (32):
     button[i][j] = Button(frame1, font=("Calibri, 5"), bg='grey99', width=2, height=1, command=lambda r=i, c=j:colourbtn(r, c))
     button[i][j].grid(row=i, column=j)
+```
+It should look like this:
+
+![Alt text](diagram/grid.png)
+
+To get the buttons to be a different colour after pressing a shade, we define the function of the buttons.
+
+>We applied the If-Else Statement for the outcome we want it to have
 
 ```
->
-
+def colourbtn(i, j):
+  global colour   
+  if colour == 0:
+    button[i][j].config(bg='grey99')
+  elif colour == 1: 
+    button[i][j].config(bg='grey88')
+  elif colour == 2:
+    button[i][j].config(bg='grey77')
+  elif colour == 3: 
+    button[i][j].config(bg='grey66')
+  elif colour == 4:
+    button[i][j].config(bg='grey44')  
+  elif colour == 5: 
+    button[i][j].config(bg='grey33')
+  elif colour == 6:
+    button[i][j].config(bg='grey11')
+  else: 
+    button[i][j].config(bg='grey1')
+```
 ---
+<br>
 
-## Colours Selection Section
->Create 8 different Tkinter buttons of the different shades of grey for the user to select to colour the squares in the grid.
+## Colours Selection Section:
+Create 8 different Tkinter buttons of the different shades of grey for the user to select to colour the squares in the grid.
+
+>We assigned the lamda function in the shades buttons as an anonymous function for callback of the 32 by 32 grid.
 
 ```
 white = Button(frame2, text="White", font=("Calibri, 12"), bg='grey99', width=13,height=2, command=lambda m=0:change_colour(m))
@@ -157,57 +183,214 @@ grey6.grid(row=6, column=0)
 
 black = Button(frame2, text="Black", font=("Calibri, 12"), bg='grey1', fg='white', width=13, height=2, command=lambda m=7:change_colour(m))
 black.grid(row=7, column=0)
+```
+We then defined the function of the argument from the buttons.
+
+>We used the term "global colour" so that it is assigned in all levels
+<br>
+<br>
+The variable "m" is the colours in numerical order according to the shades as seen earlier
 
 ```
+def change_colour(m): 
+  global colour
+  colour=m 
 
-## Pattern bar
-This chunk of code provides the pattern bar.
+  print("Colour chosen is {}".format(colour))
+```
+Visualization of the shades section:
 
-### All white button
+![Alt text](diagram/shades.png)
+
+![Alt text](diagram/colourchose.png)
+
+## Pattern Bar Section:
+The 4 preset buttons which outputs an all white, all black, an X pattern and a sequence.
+
+### All White Button:
 ```
 #all white button
 allwht = Button(frame3, text='All White', font = ("Calibri, 12"), bg='white',width = 13, height = 2,command = allwhite)
 allwht.grid(row=0, column=0)
 ```
-Insert image of all white here
-
-### All black button
+Define the function of the white button using for loop and if-else statement:
+```
+def allwhite():
+    for j in range(32):
+        for i in range (32):
+            button[i][j].config(bg='grey99')
+```
+### All Black Button
 ```
 #all black button
 allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
 allblk.grid(row=0, column=1)
 ```
-insert image of all black
-
-### Cross pattern
+Define the function of the black button using for loop and if-else statement:
+```
+def allblack():
+    for j in range(32):
+        for i in range(32):
+            button[i][j].config(bg ='grey1')
+```
+### Cross Pattern Button:
 ```
 #cross pattern
 pattern1 = Button(frame3, text="Pattern 1",font= ("Calibri, 12"), bg='gold', width=13, height=2, command=pat1)
 pattern1.grid(row=0, column=2)
 ```
-
-Insert image of cross pattern here
-
-### Sequence button
+Define the function of the X Pattern button using for loop and if-else statement:
+```
+def pattern():
+    for i in range (32):
+        for j in range (32):
+            if i == j: 
+                button[i][j].config(bg='grey1')
+            elif i + j == 31: 
+                button[i][j].config(bg='grey1')
+            else:
+                button[i][j].config(bg ='grey99')
+```
+### Sequence Button
 ```
 #sequence button
 pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
 pattern2.grid(row=0, column=3)
 ```
-
-Insert image of sequence pattern here
-
+Define the function of the Sequence button using for loop and if-else statement:
+```
+def seq():
+    for j in range(32):
+        for i in range(32):
+            if i == 1 or i == 9 or i == 17 or i == 25:
+                button[i][j].config(bg = 'grey88')
+            elif i == 2 or i == 10 or i == 18 or i == 26:
+                button[i][j].config(bg = 'grey77')
+            elif i == 3 or i == 11 or i == 19 or i == 27:
+                button[i][j].config(bg = 'grey66')
+            elif i == 4 or i == 12 or i == 20 or i == 28:
+                button[i][j].config(bg = 'grey44')
+            elif i == 5 or i == 13 or i == 21 or i == 29:
+                button[i][j].config(bg = 'grey33')
+            elif i == 6 or i == 14 or i == 22 or i == 30:
+                button[i][j].config(bg = 'grey11')
+            elif i == 7 or i == 15 or i == 23 or i == 31:
+                button[i][j].config(bg = 'grey1')
+            else:
+                button[i][j].config(bg = 'grey99')
+```
 
 
 ## Send image button
-This button will send the data of the pattern
+A button that will output the values in List of List form of the 32 by 32 pattern
 
 ```
 send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
 send.grid(row=0, column=0)
 ```
-insert image of data output here
+Create a variable called "value" in order to get the list of list output:
+```
+value = [[0 for j in range(32)] for i in range (32)]
+```
+Next, define the send button image:
+>We used the term "global value" so that it is accessible to the other functions.
+```
+def sendImage():
+    global value
 
+    print(value)
+```
+Input the variable "value" in the earlier If-Else statements of the functions
+<br>
+**32 by 32 Grid(1024 buttons):**
+```
+def colourbtn(i, j):
+  global colour   
+  if colour == 0:
+    button[i][j].config(bg='grey99')
+    value[i][j] = 0
+  elif colour == 1: 
+    button[i][j].config(bg='grey88')
+    value[i][j] = 20
+  elif colour == 2:
+    button[i][j].config(bg='grey77')
+    value[i][j] = 30
+  elif colour == 3: 
+    button[i][j].config(bg='grey66')
+    value[i][j] = 40
+  elif colour == 4:
+    button[i][j].config(bg='grey44')  
+    value[i][j] = 50
+  elif colour == 5: 
+    button[i][j].config(bg='grey33')
+    value[i][j] = 60
+  elif colour == 6:
+    button[i][j].config(bg='grey11')
+    value[i][j] = 70
+  else: 
+    button[i][j].config(bg='grey1')
+    value[i][j] = 90
+```
+**All White:**
+```
+def allwhite():
+    for j in range(32):
+        for i in range (32):
+            button[i][j].config(bg='grey99')
+            value[i][j] = 0
+```
+**All Black:**
+```
+def allblack():
+    for j in range(32):
+        for i in range(32):
+            button[i][j].config(bg ='grey1')
+            value[i][j] = 90
+```
+**Cross Pattern:**
+```
+def pattern():
+    for i in range (32):
+        for j in range (32):
+            if i == j: 
+                button[i][j].config(bg='grey1')
+                value[i][j] = 90
+            elif i + j == 31: 
+                button[i][j].config(bg='grey1')
+                value[i][j] = 90
+            else:
+                button[i][j].config(bg ='grey99')
+                value[i][j] = 0
+```
+**Sequence:**
+```
+def seq():
+    for j in range(32):
+        for i in range(32):
+            if i == 1 or i == 9 or i == 17 or i == 25:
+                button[i][j].config(bg = 'grey88')
+                value[i][j] = 20
+            elif i == 2 or i == 10 or i == 18 or i == 26:
+                button[i][j].config(bg = 'grey77')
+                value[i][j] = 30
+            elif i == 3 or i == 11 or i == 19 or i == 27:
+                button[i][j].config(bg = 'grey66')
+                value[i][j] = 40
+            elif i == 4 or i == 12 or i == 20 or i == 28:
+                button[i][j].config(bg = 'grey44')
+                value[i][j] = 50
+            elif i == 5 or i == 13 or i == 21 or i == 29:
+                button[i][j].config(bg = 'grey33')
+                value[i][j] = 60
+            elif i == 6 or i == 14 or i == 22 or i == 30:
+                button[i][j].config(bg = 'grey11')
+                value[i][j] = 70
+            elif i == 7 or i == 15 or i == 23 or i == 31:
+                button[i][j].config(bg = 'grey1')
+                value[i][j] = 90
+            else:
+                button[i][j].config(bg = 'grey99')
+                value[i][j] = 0
+```
 
-## 
 
