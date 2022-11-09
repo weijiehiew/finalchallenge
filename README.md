@@ -5,12 +5,12 @@
 ![Alt text](diagram/documentation%20pics/GUI.png)
 
 ## Purpose of the 32 x 32 GUI
-Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey.
+Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey. Sending the image after will output the values of the buttons.
 
 ---
 
 ### How it works:
->If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid will change to its colour.
+If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid will change to its colour.
 
 ![Alt text](diagram/documentation%20pics/Gif%20Video.gif)
 
@@ -35,7 +35,7 @@ It makes the 32x32 grid buttons turn into the darkest shades (Black).
 
 ![Alt text](diagram/documentation%20pics/xpat.png)
 
-It turns the 32x32 grid into a cross shape with the black shade.
+It turns the 32x32 grid into a cross shape using the black shade.
 
 ---
 
@@ -43,14 +43,22 @@ It turns the 32x32 grid into a cross shape with the black shade.
 
 ![Alt text](diagram/documentation%20pics/seq.png)
 
-The 32x32 grid turns into the shades faded sequence.
+The 32x32 grid turns into a faded sequence of the shades.
+
+---
+
+**"Send Image" Button:**
+
+![Alt text](diagram/documentation%20pics/value.png)
+
+It outputs the List of List degree value of the shade colour from the 32x32 grid in the terminal section.
 
 <br>
 <br>
 
 # Getting started
 
->Import tkinter library into the file and create a GUI application window on a main event loop
+>First and most importantly, we have to import tkinter library into the file and create a GUI application window on a main event loop
 
 ```
 from tkinter import *
@@ -62,7 +70,10 @@ main.mainloop()
 
 ## Use of Frame Statement
 
- >Create frames to separate sections of the main window: 
+ >Next we created frames to separate the main window into containers like section to group and organize the widget layout.
+<br>
+<br>
+We divided them into four sections:
  <br>
  - Frame 1(32x32 Grid)
  <br>
@@ -90,33 +101,34 @@ frame4 = Frame(main)
 frame4.grid(row=2, columnspan=2)
 
 ```
+![Alt text](diagram/frame.png)
 
-### *insert image here of the frames
+<br>
 
-# How to code the Pixel Tint
+# How to code the Pixel Tint System
 
-## 32 by 32 Grid:
+## 32 by 32 Grid Section:
 
->Using the Nested For Loop statement, it will create a two dimentional 32 x 32 grid using rows and columns.
+Using the Nested For Loop statement, it will create a two dimentional 32 x 32 grid in the form of rows and columns.
 <br>
 <br>
-i=rows,
+>i=rows,
 j=columns
 ```
 button = [[j for j in range(32)] for i in range(32)]
 
-value = [[0 for j in range(32)] for i in range (32)]
+```
 
+```
 for i in range (32):
   for j in range (32):
     button[i][j] = Button(frame1, font=("Calibri, 5"), bg='grey99', width=2, height=1, command=lambda r=i, c=j:colourbtn(r, c))
     button[i][j].grid(row=i, column=j)
 
 ```
->The "button" variable 
-![Alt text](../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/diagram/documentation%20pics/grid.png)
-# insert image here for the grid
+>
 
+---
 
 ## Colours Selection Section
 >Create 8 different Tkinter buttons of the different shades of grey for the user to select to colour the squares in the grid.
@@ -124,18 +136,25 @@ for i in range (32):
 ```
 white = Button(frame2, text="White", font=("Calibri, 12"), bg='grey99', width=13,height=2, command=lambda m=0:change_colour(m))
 white.grid(row=0, column=0)
+
 grey1 = Button(frame2, text="Grey1", font=("Calibri, 12"), bg='grey88', width=13, height=2, command=lambda m=1:change_colour(m))
 grey1.grid(row=1, column=0)
+
 grey2 = Button(frame2, text="Grey2", font=("Calibri, 12"), bg='grey77', width=13, height=2, command=lambda m=2:change_colour(m))
 grey2.grid(row=2, column=0)
+
 grey3 = Button(frame2, text="Grey3", font=("Calibri, 12"), bg='grey66', width=13, height=2, command=lambda m=3:change_colour(m))
 grey3.grid(row=3, column=0)
+
 grey4 = Button(frame2, text="Grey4", font=("Calibri, 12"), bg='grey44', width=13, height=2, command=lambda m=4:change_colour(m))
 grey4.grid(row=4, column=0)
+
 grey5 = Button(frame2, text="Grey5", font=("Calibri, 12"), bg='grey33', fg='white', width=13, height=2, command=lambda m=5:change_colour(m))
 grey5.grid(row=5, column=0)
+
 grey6 = Button(frame2, text="Grey6", font=("Calibri, 12"), bg='grey11', fg='white', width=13, height=2, command=lambda m=6:change_colour(m))
 grey6.grid(row=6, column=0)
+
 black = Button(frame2, text="Black", font=("Calibri, 12"), bg='grey1', fg='white', width=13, height=2, command=lambda m=7:change_colour(m))
 black.grid(row=7, column=0)
 
