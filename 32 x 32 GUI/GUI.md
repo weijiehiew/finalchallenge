@@ -85,7 +85,7 @@ black.grid(row=7, column=0)
 ```
 
 ## Pattern bar
-This chunk of code provides the pattern bar
+This chunk of code provides the pattern bar.
 
 ### All white button
 ```
