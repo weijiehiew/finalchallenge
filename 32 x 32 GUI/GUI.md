@@ -1,8 +1,7 @@
 # 32 x 32 GUI
 
 ## First look at the 32 by 32 GUI
-![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/documentation%20pics/32by32GUI.jpg)
-![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32by32GUI.jpg)
+![Alt text](../../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/32%20x%2032%20GUI/documentation%20pics/32by32GUI.png)
 ## Purpose of the 32 x 32 GUI
 The purpose of this 32 x 32 GUI is to allow users to be able to colour the 32 x 32 grid with different shades of grey. They will then be able to send the image out which will correspond with the 32 x 32 polarizing dishes.
 
