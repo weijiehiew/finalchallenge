@@ -114,7 +114,7 @@ for i in range (32):
 
 ```
 >The "button" variable 
-
+![Alt text](../../../../../../../C:/Users/65844/OneDrive/Documents/GitHub/finalchallenge/diagram/documentation%20pics/grid.png)
 # insert image here for the grid
 
 
