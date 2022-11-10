@@ -54,6 +54,8 @@ Password: (enter your password here)
 ![Alt text](diagram/putty.png)<br>
 *Screenshot of PuTTY configuration*
 
+>"Save" and then "Load"
+
 2. After logging in, update and upgrade raspberry pi
 ```
 sudo apt update
