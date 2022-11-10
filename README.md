@@ -1,11 +1,71 @@
 # Pixel Tint 32 x 32 GUI
+Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey. Sending the image after will output the values of the buttons.
 
-## First look of Pixel Tint
+# Hardware information
+Hardware: Raspberry Pi Model B(4GB) <br>
+Operating System: Raspbian Buster Full
+<br>
+
+---
+
+## Getting the raspberry pi connected
+
+```mermaid
+graph LR
+A[Laptop]--> B[VNC]
+B --> A
+F[Putty-SSH] --> A
+A --> F
+F --> C[WIFI]
+C --> D[Raspberry Pi]
+
+```
+
+## Initial boot of the raspberry pi
+---
+1. **Secure Shell (SSH)** into Raspberry Pi using **Putty**
+```
+Hostname: pi@ip_address
+Port: 22
+Password: (enter your password here)
+```
+
+2. After logging in, update and upgrade raspberry pi
+```
+sudo apt update
+sudo apt upgrade
+```
+
+## Configuring the pi
+---
+>Enabling SSH
+```
+sudo raspi-config
+```
+
+Select `Interface Options` <br>
+Select `P2 SSH`
+
+>Enabling VNC
+```
+sudo raspi-config
+```
+Select `Interface Options`<br>
+Select ` P3 VNC`
+
+<br>
+Now, we are ready to begin.
+<br>
+
+---
+
+
+
+
+# First look of Pixel Tint
 
 ![Alt text](diagram/GUI.png)
-
-## Purpose of the 32 x 32 GUI
-Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey. Sending the image after will output the values of the buttons.
+*Screenshot of the final 32x32GUI*
 
 ---
 
@@ -13,11 +73,13 @@ Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface
 If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid, it will change to the colour.
 
 ![Alt text](diagram/Gif%20Video.gif)
+*Example of how the GUI works*
 
 ## Pattern Section
 **"All White" Button:**
 
 ![Alt text](diagram/Allwhite.png)
+*Output of all white button*
 
 It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> It is also used to reset the grid back to white.
 
@@ -26,6 +88,7 @@ It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> 
 **"All Black" Button:**
 
 ![Alt text](diagram/allblack.png)
+*Output of all black button*
 
 It turns all the buttons in the 32x32 grid into the darkest shade (Black).
 
@@ -34,6 +97,7 @@ It turns all the buttons in the 32x32 grid into the darkest shade (Black).
 **"X Pattern" Button:**
 
 ![Alt text](diagram/xpat.png)
+*Output of X pattern button*
 
 It turns the 32x32 grid into a cross shape using the black shade.
 
@@ -42,14 +106,22 @@ It turns the 32x32 grid into a cross shape using the black shade.
 **"Sequence" Button:**
 
 ![Alt text](diagram/seq.png)
-
+*Output of Sequence button*
+<br>
 The 32x32 grid turns into a faded sequence of the shades.
 
 ---
 
 **"Send Image" Button:**
 
+*Output values from Send Image button (All White)*
+
+*Output values from Send Image button (All Black)*
+
+*Output values from Send Image button (All X Pattern)*
+
 ![Alt text](diagram/value.png)
+*Output values from Send Image button (Sequence)*
 
 It outputs the List of List degree value of the shade colour from the 32x32 grid in the terminal section.
 
@@ -100,7 +172,7 @@ frame4.grid(row=2, columnspan=2)
 A visual representation of how we want each sections to look like:
 
 ![Alt text](diagram/frame.png)
-
+*Example of the frame*
 <br>
 
 # How to code the Pixel Tint System
@@ -126,6 +198,7 @@ for i in range (32):
 It should look like this:
 
 ![Alt text](diagram/grid.png)
+*Example of the 32 x 32 grid*
 
 To get the buttons to be a different colour after pressing a shade, we define the function of the buttons.
 
@@ -200,9 +273,11 @@ def change_colour(m):
 ```
 Visualization of the shades section:
 
-![Alt text](diagram/shades.png)
+![Alt text](diagram/shades.png)<br>
+*Shades of colour*
 
-![Alt text](diagram/colourchose.png)
+![Alt text](diagram/colourchose.png)<br>
+*Output of shades*
 
 ## Pattern Bar Section:
 The 4 preset buttons which outputs an all white, all black, an X pattern and a sequence.
