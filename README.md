@@ -38,7 +38,7 @@ ipconfig
 
 
 ## Advnaced Port Scanner
->Based on the IPv4 address found, scan for your pi's IPv4 address
+>Based on the IPv4 address found, scan the network for your pi's IPv4 address
 
 ![Alt text](diagram/portscanner.png)<br>
 *Port scan of the network*
