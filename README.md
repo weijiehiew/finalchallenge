@@ -542,4 +542,16 @@ def seq():
                 value[i][j] = 0
 ```
 
+## To run the program in Raspberry Pi Terminal
+
+1. First open the terminal in raspberry pi
+2. Type in the following code:
+>based on where you saved your file
+
+ ` cd /home/pi/Desktop/`
+>based on your file name
+
+ `python3 main.py`
+
+
 
