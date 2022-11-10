@@ -84,8 +84,9 @@ Add your raspberry pi's IPv4 and name
 ![Alt text](diagram/VNCViewer.png)<br>
 *VNC Viewer*
 <br>
+Now after connecting, we have successfully established remote control to the raspberry pi. 
 
-**Now, we are ready to begin.**
+**Now, it is time to get started and have loads of fun!!!**
 <br>
 
 ---
