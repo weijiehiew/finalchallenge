@@ -220,7 +220,7 @@ def allwhite():
         for i in range (32):
             button[i][j].config(bg='grey99')
 ```
-### All Black Button
+### All Black Button:
 ```
 #all black button
 allblk = Button(frame3, text='All Black', font = ("Calibri, 12"), bg='Black',fg = 'white',width = 13, height = 2, command = allblack)
@@ -251,7 +251,7 @@ def pattern():
             else:
                 button[i][j].config(bg ='grey99')
 ```
-### Sequence Button
+### Sequence Button:
 ```
 #sequence button
 pattern2 = Button(frame3, text='Pattern 2', font = ("Calibri, 12"), bg='pink',fg = 'black',width = 13, height = 2,command = pat2)
@@ -281,7 +281,7 @@ def seq():
 ```
 
 
-## Send image button
+## Send Image Section:
 A button that will output the values in List of List form of the 32 by 32 pattern
 
 ```
