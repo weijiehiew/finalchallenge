@@ -1,11 +1,16 @@
 # Pixel Tint 32 x 32 GUI
 Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey. Sending the image after will output the values of the buttons.
 
-# Hardware Information
-Hardware: Raspberry Pi Model B(4GB) <br>
-Operating System: Raspbian Buster Full
+## Hardware
+- Hardware: Raspberry Pi Model B(4GB) <br>
+- Operating System: Raspbian Buster Full
+
 <br>
 
+## Software
+1. VNC Viewer
+2. PuTTY
+3. Advanced Port Scanner
 ---
 
 ## Getting the Raspberry Pi 4 connected
@@ -21,6 +26,23 @@ C --> D[Raspberry Pi]
 
 ```
 
+## Getting IP address to connect Raspi
+>Open command prompt to find the network's IPv4 Address
+
+```
+ipconfig
+```
+
+![Alt text](diagram/cmd.png)<br>
+*Screenshot of IPv4 address*
+
+
+## Advnaced Port Scanner
+>Based on the IPv4 address found, scan for your pi's IPv4 address
+
+![Alt text](diagram/portscanner.png)<br>
+*Port scan of the network*
+
 ## Initial Boot of the Raspberry Pi 4
 ---
 1. **Secure Shell (SSH)** into Raspberry Pi using **Putty**
@@ -35,7 +57,6 @@ Password: (enter your password here)
 sudo apt update
 sudo apt upgrade
 ```
-
 ## Configuring the Pi
 ---
 >Enabling SSH
@@ -53,8 +74,18 @@ sudo raspi-config
 Select `Interface Options`<br>
 Select ` P3 VNC`
 
+
+## VNC Viewer
+
+>VNC is used to access the pi remotely.<br>
+File>New Connection <br>
+Add your raspberry pi's IPv4 and name
+
+![Alt text](diagram/VNCViewer.png)<br>
+*VNC Viewer*
 <br>
-Now, we are ready to begin.
+
+**Now, we are ready to begin.**
 <br>
 
 ---
