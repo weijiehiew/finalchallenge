@@ -59,9 +59,6 @@ Now, we are ready to begin.
 
 ---
 
-
-
-
 # First look of Pixel Tint
 
 ![Alt text](diagram/GUI.png)<br>
@@ -78,54 +75,63 @@ If a user clicks a specific shade from the colour section on the right and then 
 ## Pattern Section
 **"All White" Button:**
 
+It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> It is also used to reset the grid back to white.
+
 ![Alt text](diagram/Allwhite.png)<br>
 *Output of all white button*
-
-It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> It is also used to reset the grid back to white.
 
 ---
 
 **"All Black" Button:**
 
+It turns all the buttons in the 32x32 grid into the darkest shade (Black).
+
 ![Alt text](diagram/allblack.png)<br>
 *Output of all black button*
-
-It turns all the buttons in the 32x32 grid into the darkest shade (Black).
 
 ---
 
 **"X Pattern" Button:**
 
+It turns the 32x32 grid into a cross shape using the black shade.
+
 ![Alt text](diagram/xpat.png)<br>
 *Output of X pattern button*
-
-It turns the 32x32 grid into a cross shape using the black shade.
 
 ---
 
 **"Sequence" Button:**
 
+The 32x32 grid turns into a faded sequence of the shades.
+
 ![Alt text](diagram/seq.png)<br>
 *Output of Sequence button*
 <br>
-The 32x32 grid turns into a faded sequence of the shades.
 
 ---
 
 **"Send Image" Button:**
 
+It outputs the List of List degree value of the shade colour from the 32x32 grid in the terminal section.
+
+- "White", 0°
+- "Grey1", 20°
+- "Grey2", 30°
+- "Grey3", 40°
+- "Grey4", 50°
+- "Grey5", 60°
+- "Grey6", 70°
+- "Black", 90°
+
+![Alt text](diagram/value(allwht).png)
 *Output values from Send Image button (All White)*
-
+![Alt text](diagram/value(allblk).png)
 *Output values from Send Image button (All Black)*
-
-*Output values from Send Image button (All X Pattern)*
-
+![Alt text](diagram/value(xpat).png)
+*Output values from Send Image button (X Pattern)*
 ![Alt text](diagram/value.png)<br>
 *Output values from Send Image button (Sequence)*
 
-It outputs the List of List degree value of the shade colour from the 32x32 grid in the terminal section.
-
-<br>
 <br>
 
 # Getting started
