@@ -19,7 +19,7 @@ If a user clicks a specific shade from the colour section on the right and then 
 
 ![Alt text](diagram/Allwhite.png)
 
-It makes the 32x32 grid buttons turn into the lightest shade (White). But it is also to reset the grid back to white.
+It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> It is also used to reset the grid back to white.
 
 ---
 
@@ -27,7 +27,7 @@ It makes the 32x32 grid buttons turn into the lightest shade (White). But it is 
 
 ![Alt text](diagram/allblack.png)
 
-It makes the 32x32 grid buttons turn into the darkest shades (Black).
+It turns all the buttons in the 32x32 grid into the darkest shade (Black).
 
 ---
 
