@@ -1,14 +1,14 @@
 # Pixel Tint 32 x 32 GUI
 Our objective is to create a 32 by 32 Pixel-Tint System Graphical User Interface that enables users to colour the grid, create patterns and sequence using the different shades of grey. Sending the image after will output the values of the buttons.
 
-# Hardware information
+# Hardware Information
 Hardware: Raspberry Pi Model B(4GB) <br>
 Operating System: Raspbian Buster Full
 <br>
 
 ---
 
-## Getting the raspberry pi connected
+## Getting the Raspberry Pi 4 connected
 
 ```mermaid
 graph LR
@@ -21,7 +21,7 @@ C --> D[Raspberry Pi]
 
 ```
 
-## Initial boot of the raspberry pi
+## Initial Boot of the Raspberry Pi 4
 ---
 1. **Secure Shell (SSH)** into Raspberry Pi using **Putty**
 ```
@@ -36,7 +36,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## Configuring the pi
+## Configuring the Pi
 ---
 >Enabling SSH
 ```
