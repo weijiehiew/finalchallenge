@@ -318,7 +318,10 @@ Visualization of the shades section:
 *Output of shades*
 
 ## Pattern Bar Section:
-The 4 preset buttons which outputs an all white, all black, an X pattern and a sequence.
+The 4 preset buttons which outputs an all white, all black, an X pattern and a sequence.<br>
+
+![Alt text](diagram/patternbar.png)<br>
+*Screenshot of the pattern bar*
 
 ### All White Button:
 ```
@@ -396,6 +399,9 @@ def seq():
 
 ## Send Image Section:
 A button that will output the values in List of List form of the 32 by 32 pattern
+
+![Alt text](diagram/sendimagebutton.png)<br>
+*Screenshot of Send Image button*
 
 ```
 send = Button(frame4, text="Send Image", font= ("Calibri, 12"), width=13, height=2, command=sendImage )
