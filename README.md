@@ -64,7 +64,7 @@ Now, we are ready to begin.
 
 # First look of Pixel Tint
 
-![Alt text](diagram/GUI.png)
+![Alt text](diagram/GUI.png)<br>
 *Screenshot of the final 32x32GUI*
 
 ---
@@ -72,13 +72,13 @@ Now, we are ready to begin.
 ### How it works:
 If a user clicks a specific shade from the colour section on the right and then pressing one of the buttons from the 32x32 grid, it will change to the colour.
 
-![Alt text](diagram/Gif%20Video.gif)
+![Alt text](diagram/Gif%20Video.gif)<br>
 *Example of how the GUI works*
 
 ## Pattern Section
 **"All White" Button:**
 
-![Alt text](diagram/Allwhite.png)
+![Alt text](diagram/Allwhite.png)<br>
 *Output of all white button*
 
 It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> It is also used to reset the grid back to white.
@@ -87,7 +87,7 @@ It turns all the buttons in the 32x32 grid into the lightest shade (White).<br> 
 
 **"All Black" Button:**
 
-![Alt text](diagram/allblack.png)
+![Alt text](diagram/allblack.png)<br>
 *Output of all black button*
 
 It turns all the buttons in the 32x32 grid into the darkest shade (Black).
@@ -96,7 +96,7 @@ It turns all the buttons in the 32x32 grid into the darkest shade (Black).
 
 **"X Pattern" Button:**
 
-![Alt text](diagram/xpat.png)
+![Alt text](diagram/xpat.png)<br>
 *Output of X pattern button*
 
 It turns the 32x32 grid into a cross shape using the black shade.
@@ -105,7 +105,7 @@ It turns the 32x32 grid into a cross shape using the black shade.
 
 **"Sequence" Button:**
 
-![Alt text](diagram/seq.png)
+![Alt text](diagram/seq.png)<br>
 *Output of Sequence button*
 <br>
 The 32x32 grid turns into a faded sequence of the shades.
@@ -120,7 +120,7 @@ The 32x32 grid turns into a faded sequence of the shades.
 
 *Output values from Send Image button (All X Pattern)*
 
-![Alt text](diagram/value.png)
+![Alt text](diagram/value.png)<br>
 *Output values from Send Image button (Sequence)*
 
 It outputs the List of List degree value of the shade colour from the 32x32 grid in the terminal section.
@@ -171,7 +171,7 @@ frame4.grid(row=2, columnspan=2)
 ```
 A visual representation of how we want each sections to look like:
 
-![Alt text](diagram/frame.png)
+![Alt text](diagram/frame.png)<br>
 *Example of the frame*
 <br>
 
@@ -197,7 +197,7 @@ for i in range (32):
 ```
 It should look like this:
 
-![Alt text](diagram/grid.png)
+![Alt text](diagram/grid.png)<br>
 *Example of the 32 x 32 grid*
 
 To get the buttons to be a different colour after pressing a shade, we define the function of the buttons.
