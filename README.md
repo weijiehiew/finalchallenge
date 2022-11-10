@@ -166,6 +166,30 @@ It outputs the List of List degree value of the shade colour from the 32x32 grid
 
 <br>
 
+## Flow of the code and functions
+
+```mermaid
+graph TD
+A[main.py]--> B[Preset]
+B --> C[Shades section]
+B --> D[Pattern section]
+B --> E[sendImage]
+C --> F[change_colour]
+D --> G[allwhite]
+D --> H[allblack]
+D --> I[pattern]
+D --> J[seq]
+F --> K[8 Shades of grey]
+K --> F
+B --> L[32 x 32 Grid]
+G --> L
+H --> L
+I --> L
+J --> L
+K --> L
+L --> E
+
+```
 # Getting started
 
 >First and most importantly, we have to import tkinter library into the file and create a GUI application window on a main event loop
