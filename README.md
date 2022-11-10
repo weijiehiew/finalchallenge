@@ -51,6 +51,8 @@ Hostname: pi@ip_address
 Port: 22
 Password: (enter your password here)
 ```
+![Alt text](diagram/putty.png)<br>
+*Screenshot of PuTTY configuration*
 
 2. After logging in, update and upgrade raspberry pi
 ```
@@ -553,5 +555,11 @@ def seq():
 
  `python3 main.py`
 
+![Alt text](diagram/Raspi%20Terminal.png)<br>
+*Screenshot of Terminal*
 
+>GUI should pop up
+
+![Alt text](diagram/Raspi%20Gui.png)<br>
+*Output of Terminal*
 
