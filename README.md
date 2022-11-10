@@ -157,16 +157,22 @@ It outputs the List of List degree value of the shade colour from the 32x32 grid
 
 ![Alt text](diagram/value(allwht).png)
 *Output values from Send Image button (All White)*
+
+---
 ![Alt text](diagram/value(allblk).png)
 *Output values from Send Image button (All Black)*
+
+---
 ![Alt text](diagram/value(xpat).png)
 *Output values from Send Image button (X Pattern)*
+
+---
 ![Alt text](diagram/value.png)<br>
 *Output values from Send Image button (Sequence)*
 
-<br>
+---
 
-## Flow of the code and functions
+## Flow of Code and Functions
 
 ```mermaid
 graph TD
