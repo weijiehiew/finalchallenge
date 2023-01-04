@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 
 def colourbtn(i, j):
   global colour   
@@ -96,14 +97,56 @@ def seq():
                 button[i][j].config(bg = 'grey99')
                 value[i][j] = 0
             
-main = Tk()
+def get_x_and_y(event):
+   global lasx, lasy
+   lasx, lasy = event.x, event.y
 
+def paint(event):
+    global lasx, lasy
+    
+    if colour == 0: 
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey99',width=4)  
+    elif colour == 1:
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey88',width=4)
+        
+    elif colour == 2:
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey77',width=4)
+    elif colour == 3: 
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey66',width=4)
+    elif colour == 4:
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey44',width=4)
+    elif colour == 5: 
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey33',width=4)
+    elif colour == 6:
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey11',width=4)
+    else: 
+        c.create_line((lasx,lasy, event.x, event.y),fill='grey11',width=4)
+
+    lasx, lasy = event.x, event.y
+    
+
+def clearbtn():
+    c.delete('all')
+
+main = Tk()
+main.title("Group D")
 
 #A variable to store the colour choices 
 colour = 0
 
+notebook = ttk.Notebook(main) #widget that manages a collection of windows/displays
+
+tab1 = Frame(notebook) #new frame for tab 1
+tab2 = Frame(notebook) #new frame for tab 2
+tab3 = Frame(notebook) #new frame for tab 2
+
+notebook.add(tab1,text="Grid")
+notebook.add(tab2,text="Draw")
+notebook.add(tab3,text="Tab 3")
+notebook.grid(row=0, column = 0)
+
 #32x32 buttons
-frame1 = Frame(main) 
+frame1 = Frame(tab1) 
 frame1.grid(row=0, column=0)
 
 #shades buttons
@@ -118,6 +161,16 @@ frame3.grid(row=1, columnspan=2)
 frame4 = Frame(main)
 frame4.grid(row=2, columnspan=2) 
 
+frame5 = Frame(tab2)
+frame5.grid(row=0, column=0)
+
+c = Canvas(tab2, width=443, height=380, bg='white')
+c.grid(row=0, column=0)
+# c.pack(anchor='nw', fill='both', expand=1)
+
+c.bind('<Button-1>', get_x_and_y)
+c.bind('<B1-Motion>',paint)
+
 # 32x32 grid
 button = [[j for j in range(32)] for i in range(32)]
 
@@ -128,6 +181,8 @@ for i in range (32):
     button[i][j] = Button(frame1, font=("Calibri, 5"), bg='grey99', width=1, height=1, command=lambda r=i, c=j:colourbtn(r, c))
     button[i][j].grid(row=i, column=j)
     
+clear = Button(frame2, text="Clear", font=("Calibri, 10"), bg='grey99', width=13, height=2, command=clearbtn)
+clear.grid(row=0, column=0)
 
 # shades button
 white = Button(frame2, text="White", font=("Calibri, 12"), bg='grey99', width=13, height=2, command=lambda m=0:change_colour(m))
