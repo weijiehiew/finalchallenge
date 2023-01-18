@@ -79,43 +79,43 @@ image3button.grid(row=2, column=0)
 image4button = Button(frame3, text="Image 4",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=4:img_change(m))
 image4button.grid(row=3, column=0)
 
-image5button = Button(frame3, text="Image 1",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=5:img_change(m))
-image5button.grid(row=0, column=0)
+image5button = Button(frame3, text="Image 5",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=5:img_change(m))
+image5button.grid(row=0, column=1)
 
-image6button = Button(frame3, text="Image 2",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=6:img_change(m))
-image6button.grid(row=1, column=0)
+image6button = Button(frame3, text="Image 6",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=6:img_change(m))
+image6button.grid(row=1, column=1)
 
-image7button = Button(frame3, text="Image 3",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=7:img_change(m))
-image7button.grid(row=2, column=0)
+image7button = Button(frame3, text="Image 7",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=7:img_change(m))
+image7button.grid(row=2, column=1)
 
-image8button = Button(frame3, text="Image 4",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=8:img_change(m))
-image8button.grid(row=3, column=0)
+image8button = Button(frame3, text="Image 8",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=8:img_change(m))
+image8button.grid(row=3, column=1)
 
-image9button = Button(frame3, text="Image 1",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=9:img_change(m))
-image9button.grid(row=0, column=0)
+image9button = Button(frame3, text="Image 9",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=9:img_change(m))
+image9button.grid(row=0, column=2)
 
-image10button = Button(frame3, text="Image 2",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=10:img_change(m))
-image10button.grid(row=1, column=0)
+image10button = Button(frame3, text="Image 10",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=10:img_change(m))
+image10button.grid(row=1, column=2)
 
-image11button = Button(frame3, text="Image 3",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=11:img_change(m))
-image11button.grid(row=2, column=0)
+image11button = Button(frame3, text="Image 11",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=11:img_change(m))
+image11button.grid(row=2, column=2)
 
-image12button = Button(frame3, text="Image 4",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=12:img_change(m))
-image12button.grid(row=3, column=0)
+image12button = Button(frame3, text="Image 12",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=12:img_change(m))
+image12button.grid(row=3, column=2)
 
-image13button = Button(frame3, text="Image 1",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=13:img_change(m))
-image13button.grid(row=0, column=0)
+image13button = Button(frame3, text="Image 13",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=13:img_change(m))
+image13button.grid(row=0, column=3)
 
-image14button = Button(frame3, text="Image 2",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=14:img_change(m))
-image14button.grid(row=1, column=0)
+image14button = Button(frame3, text="Image 14",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=14:img_change(m))
+image14button.grid(row=1, column=3)
 
-image15button = Button(frame3, text="Image 3",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=15:img_change(m))
-image15button.grid(row=2, column=0)
+image15button = Button(frame3, text="Image 15",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=15:img_change(m))
+image15button.grid(row=2, column=3)
 
-image16button = Button(frame3, text="Image 4",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=16:img_change(m))
-image16button.grid(row=3, column=0)
+image16button = Button(frame3, text="Image 16",font=("Calibri, 12"), bg='white', width=13, height=2, command=lambda m=16:img_change(m))
+image16button.grid(row=3, column=3)
 
-start = Button(frame2, text="Start Show!",font=("Calibri, 12"), bg='white', width=13, height=2, command=startshow)
-start.grid(row=3, column=0)
+start = Button(frame3, text="Start Show!",font=("Calibri, 12"), bg='white', width=13, height=2, command=startshow)
+start.grid(rowspan =1 , columnspan = 4)
 
 main.mainloop()
