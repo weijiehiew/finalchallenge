@@ -1,0 +1,17 @@
+from tkinter import *
+import time
+import sendstopolarizer
+from PIL import Image, ImageOps
+
+pictures = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16']
+
+for i in range(16):
+	path3 = '/home/pi/Desktop/Resources/' + pictures[i] + '.png'
+	#path2 = Image.open(path3)
+	sendstopolarizer.middleman(Images = path3)
+	#path2 = Image.open('cartoon.png')
+	print(path3)
+	if i == 1 or i == 5 or i == 9:
+		time.sleep(5)
+	else:
+		time.sleep(15)
