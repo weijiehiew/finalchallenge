@@ -20,15 +20,7 @@ from PIL import Image, ImageOps
 #     print(pubMsg.is_published())
 
 def img_change(m):
-    global var
-    print("Importing Image")
-    
-    var=m
-
-def startshow():
-    global var
-    if var == 1:
-        ## open image file
+    ## open image file
         myImage = Image.open('Resources/1.png')
         myImage.show()
 
@@ -48,9 +40,27 @@ def startshow():
         resultImage = smallImage.resize(myImage.size, Image.NEAREST)
         resultImage.show()
 
-        
-        
 
+def startshow():
+        myImage = Image.open('Resources/1.png')
+        myImage.show()
+
+        ## greyscale image file
+        greyImage = ImageOps.grayscale(myImage)
+        #greyImage.show()
+
+        ## Limiting to 8 shades of greyscale colour
+        greyQuantize = greyImage.quantize(8)
+        #greyQuantize.show()
+
+        ## resize to 32 x 32 pixels
+        smallImage = greyQuantize.resize((32,32), Image.BILINEAR)
+        #smallImage.show()
+
+        ## Blow it back up to original photo size (32 x 32 pixels upscale)
+        resultImage = smallImage.resize(myImage.size, Image.NEAREST)
+        resultImage.show()
+        
 
 
 main = Tk()
@@ -115,46 +125,46 @@ image1button = Button(frame2, image=image1, command=lambda m=1:img_change(m))
 image1button.grid(row=0, column=0, padx=10, pady=10)
 
 image2button = Button(frame2, image=image2, command=lambda m=2:img_change(m))
-image2button.grid(row=1, column=0)
+image2button.grid(row=0, column=1)
 
 image3button = Button(frame2, image=image3, command=lambda m=3:img_change(m))
-image3button.grid(row=2, column=0)
+image3button.grid(row=0, column=2)
 
 image4button = Button(frame2, image=image4, command=lambda m=4:img_change(m))
-image4button.grid(row=3, column=0)
+image4button.grid(row=0, column=3)
 
 image5button = Button(frame2, image=image5, command=lambda m=5:img_change(m))
-image5button.grid(row=0, column=1)
+image5button.grid(row=1, column=0)
 
 image6button = Button(frame2, image=image6, command=lambda m=6:img_change(m))
 image6button.grid(row=1, column=1)
 
 image7button = Button(frame2, image=image7, command=lambda m=7:img_change(m))
-image7button.grid(row=2, column=1)
+image7button.grid(row=1, column=2)
 
 image8button = Button(frame2, image=image8, command=lambda m=8:img_change(m))
-image8button.grid(row=3, column=1)
+image8button.grid(row=1, column=3)
 
 image9button = Button(frame2, image=image9, command=lambda m=9:img_change(m))
-image9button.grid(row=0, column=2)
+image9button.grid(row=2, column=0)
 
 image10button = Button(frame2, image=image10, command=lambda m=10:img_change(m))
-image10button.grid(row=1, column=2)
+image10button.grid(row=2, column=1)
 
 image11button = Button(frame2, image=image11, command=lambda m=11:img_change(m))
 image11button.grid(row=2, column=2)
 
 image12button = Button(frame2, image=image12, command=lambda m=12:img_change(m))
-image12button.grid(row=3, column=2)
+image12button.grid(row=2, column=3)
 
 image13button = Button(frame2, image=image13, command=lambda m=13:img_change(m))
-image13button.grid(row=0, column=3)
+image13button.grid(row=3, column=0)
 
 image14button = Button(frame2, image=image14, command=lambda m=14:img_change(m))
-image14button.grid(row=1, column=3)
+image14button.grid(row=3, column=1)
 
 image15button = Button(frame2, image=image15, command=lambda m=15:img_change(m))
-image15button.grid(row=2, column=3)
+image15button.grid(row=3, column=2)
 
 image16button = Button(frame2, image=image16, command=lambda m=16:img_change(m))
 image16button.grid(row=3, column=3)
